@@ -1,0 +1,80 @@
+div {
+}
+
+.product1 {
+  border: 2px solid rgb(88, 162, 61);
+  padding: 16px;
+  background-image: url("./images/img_1.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.product2 {
+  border: 2px solid sandybrown;
+  padding: 16px;
+}
+
+#card .card-container {
+  border: 1px dashed red;
+  padding: 24px;
+  background-color: #d2cfcf;
+}
+
+.card-item {
+  color: red;
+  text-align: center;
+}
+
+.card-container .card-item:nth-child(2) {
+  font-size: 30px;
+  font-weight: 700;
+  letter-spacing: 5px;
+  text-align: center;
+  text-decoration: line-through;
+  text-transform: uppercase;
+}
+
+.card-name {
+  font-size: 24px;
+}
+
+.card-container p:last-child {
+  text-align: justify;
+}
+.card-title {
+  color: aquamarine;
+}
+.card-age {
+  color: red;
+}
+
+.line-65 {
+}
+
+.country {
+  background: rgb(59, 58, 56);
+  color: #fff;
+  margin: 16px 0 30px 0;
+  border: 2px solid rgb(218, 29, 15);
+
+  /* padding: 24px; */
+
+  /* padding-left: 12px;
+  padding-top: 20px;
+  padding-bottom: 10px;
+  padding-right: 28px; */
+
+  /* top, right, bottom, left*/
+  /* padding: 20px 28px 10px 12px; */
+
+  /* padding: top-bottom left-right */
+  padding: 24px 10px;
+
+  /* padding:  top lef-right bottom*/
+  padding: 30px 10px 8px;
+}
+
+/* Layouts */
+.country-container {
+  display: flex;
+  justify-content: center;
+}
