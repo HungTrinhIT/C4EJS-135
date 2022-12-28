@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML Form</title>
+  </head>
+  <body>
+    <header>
+      <span>Shoppe</span>
+      <a href="#">Mua hàng</a>
+      <a href="#">Liên hệ</a>
+      <a href="#">Giỏ hàng</a>
+    </header>
+
+    <form>
+      <div>
+        <label for="username">Username</label>
+        <input type="text" placeholder="Enter your username" id="username" />
+      </div>
+      <div>
+        <label for="fullname">Fullname</label>
+        <input type="text" placeholder="Enter your fullname" id="fullname" />
+      </div>
+
+      <div>
+        <label for="password">Password</label>
+        <input
+          type="password"
+          placeholder="Enter your password"
+          id="password"
+        />
+      </div>
+      <div>
+        <label for="cv">CV *</label>
+        <input type="file" id="cv" />
+      </div>
+      <div>
+        <label for="dob">Date of birth</label>
+        <input type="date" id="dob" />
+      </div>
+
+      <div>
+        <p>Choose you gender</p>
+        <div>
+          <input type="radio" id="male" name="gender" />
+          <label for="male">Male</label>
+        </div>
+        <div>
+          <input type="radio" id="female" name="gender" />
+          <label for="female">Female</label>
+        </div>
+        <div>
+          <input type="radio" id="other" name="gender" />
+          <label for="other">Other</label>
+        </div>
+      </div>
+
+      <div>
+        <p>Choose your favorite color</p>
+        <div>
+          <input type="checkbox" id="red" name="color" />
+          <label for="red">Red color</label>
+        </div>
+        <div>
+          <input type="checkbox" id="blue" name="color" />
+          <label for="blue">Blue color</label>
+        </div>
+        <div>
+          <input type="checkbox" id="black" name="color" />
+          <label for="black">Black color</label>
+        </div>
+        <div>
+          <input type="checkbox" id="white" name="color" />
+          <label for="white">White color</label>
+        </div>
+      </div>
+
+      <div>
+        <textarea cols="30" rows="10"></textarea>
+      </div>
+
+      <div>
+        <p>Choose your city</p>
+        <select>
+          <option value="">Choose your city</option>
+          <option value="HN">Ha Noi</option>
+          <option value="DN">Da Nang</option>
+          <option value="TG">Tien Giang</option>
+          <option value="LS">Lang Son</option>
+        </select>
+      </div>
+
+      <button>Submit</button>
+    </form>
+
+    <footer>
+      <p>Footer</p>
+    </footer>
+  </body>
+</html>
