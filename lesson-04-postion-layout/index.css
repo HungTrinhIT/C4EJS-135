@@ -1,0 +1,62 @@
+* {
+  box-sizing: border-box;
+}
+.box {
+  width: 50px;
+  height: 60px;
+  padding: 50px;
+  background-color: red;
+}
+
+.box-sizing {
+  box-sizing: border-box;
+  width: 50px;
+  height: 60px;
+  padding: 50px;
+  background-color: blue;
+}
+
+.master-parent {
+  height: 1000px;
+}
+.btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+}
+
+.parent {
+  height: 100px;
+  width: 100%;
+  background-color: red;
+  position: relative;
+  top: 50px;
+}
+
+.child {
+  width: 30px;
+  height: 30px;
+  background-color: blue;
+  position: absolute;
+  top: 30px;
+  left: 50px;
+}
+
+.services {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.services-item {
+  border: 1px solid red;
+  padding: 24px;
+  width: 150px;
+}
+.service-1 {
+  height: 300px;
+}
+
+.service-2 {
+  height: 200px;
+}
