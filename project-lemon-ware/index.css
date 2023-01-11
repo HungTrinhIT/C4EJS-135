@@ -1,0 +1,92 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-color: #b00000;
+  --text-color-1: #000000;
+  --text-color-2: #2e2e2e;
+  --text-color-3: #18191f;
+  --text-color-4: #18191f;
+
+  --gray-color-1: #808080;
+  --gray-color-1: #d6d4d4;
+
+  --white-color: #ffffff;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+.container {
+  max-width: 1266px;
+  margin: 0 auto;
+}
+
+/* Header section */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 40px;
+}
+
+.header .header-logo {
+  display: flex;
+  align-items: center;
+}
+
+.header .header-logo img {
+  width: 74px;
+  height: auto;
+  margin-right: 72px;
+}
+
+.header .header-logo span {
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 22px;
+  padding-bottom: 4px;
+  border-bottom: 1px solid var(--primary-color);
+}
+
+.header .header-nav ul {
+  display: flex;
+  align-items: center;
+  gap: 36px;
+  list-style: none;
+}
+
+.header-nav-item a {
+  color: var(--text-color-1);
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 22px;
+  text-decoration: none;
+}
+
+.header-contact {
+  display: flex;
+  align-items: center;
+}
+
+.header-contact-account {
+  color: var(--text-color-1);
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 22px;
+  padding-right: 34px;
+  border-right: 1px solid var(--gray-color-1);
+}
+.header-contact-phone {
+  margin-left: 34px;
+  color: var(--primary-color);
+  margin-right: 8px;
+}
+
+.header-contact-phone span {
+  color: var(--text-color-1);
+}
