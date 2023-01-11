@@ -335,3 +335,11 @@ body {
   line-height: 18px;
   color: var(--text-color-1);
 }
+
+/* <= 992px ipad air, ipad pro*/
+@media screen and (max-width: 1024px) {
+}
+
+/* <= 992px mobile: samsung iphone*/
+@media screen and (max-width: 769px) {
+}
