@@ -336,6 +336,49 @@ body {
   color: var(--text-color-1);
 }
 
+.testimonials-container {
+  max-width: 1015px;
+  margin: 0 auto;
+  position: relative;
+}
+.test-header {
+  max-width: 43%;
+}
+.test-header .test-title {
+  font-weight: 800;
+  font-size: 48px;
+  line-height: 64px;
+  color: var(--text-color-4);
+  margin-bottom: 8px;
+}
+.test-header p {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 32px;
+  color: var(--text-color-4);
+}
+.test-content-item {
+  position: absolute;
+  max-width: 350px;
+  background: var(--white-color);
+  box-shadow: 0px 10px 20px rgba(41, 41, 42, 0.07);
+  border-radius: 8px;
+  padding: 32px;
+}
+
+.test-content .test-content-item:nth-child(1) {
+  top: 248px;
+  left: calc(50% - 362px);
+}
+.test-content .test-content-item:nth-child(2) {
+  max-width: 445px;
+  left: calc(50% + 12px);
+  top: 104px;
+}
+.test-content .test-content-item:nth-child(3) {
+  top: 290px;
+  left: calc(50% + 12px);
+}
 /* <= 992px ipad air, ipad pro*/
 @media screen and (max-width: 1024px) {
 }
