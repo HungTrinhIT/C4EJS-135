@@ -10,6 +10,7 @@ var nUm = 3;
 // 2. case sensitive
 // 3.
 let product = "IPhone 14 pro max";
+product = "Iphone 13";
 let $product = "IPhone 14 pro max";
 let _product = "IPhone 14 pro max";
 // let break = "Hello mindx";
@@ -29,7 +30,7 @@ console.log("Tôi được công ty ABCD thưởng tết:", product);
 console.log("Product có kiểu dữ liệu là:", typeof product);
 
 // Không thể re-assign một biến được khai báo bằng const
-// PI = 3.141;
+// PI = 10;
 console.log("Hằng số PI có giá trị là", PI);
 console.log("PI có kiểu dữ liệu là:", typeof PI);
 
@@ -103,6 +104,7 @@ if (total == "200") {
 */
 const a = 100;
 const b = 88;
+
 const resultBetweenAandB = a >= b;
 console.log("resultBetweenAandB:", resultBetweenAandB);
 console.log("type of resultBetweenAandB:", typeof resultBetweenAandB);
