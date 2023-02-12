@@ -207,3 +207,12 @@ console.log(getDistance({ x: -2, y: 1 }, { x: 4, y: 3 })); // ➞ 6.325
 console.log(getDistance({ x: 0, y: 0 }, { x: 1, y: 1 })); // ➞ 1.414
 
 console.log(getDistance({ x: 10, y: -5 }, { x: 8, y: 16 })); //➞ 21.095
+
+/*
+    1. C4E - Code for everyone: HTML, CSS, Foundation Programming (Javascript)
+      + Test:  (3 hours) (> 60%)
+        * 2 problems solving: array, object, loop, branching, function 
+        * Public API => data (movies, foods, car, pokemon,...) => Fetching => Render UI 
+        
+    2. Code battle => form group (2-4 members) => topic (2,5 weeks) 
+*/

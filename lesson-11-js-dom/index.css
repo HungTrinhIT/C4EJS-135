@@ -1,0 +1,23 @@
+.title {
+  font-weight: bold;
+  color: red;
+}
+
+.products .product-item {
+  border: 1px solid #888888;
+  padding: 24px;
+}
+
+#list-product .product-item:nth-child(4) {
+  color: blueviolet;
+}
+.btn {
+  background: blueviolet;
+  margin-top: 24px;
+  border: none;
+  outline: none;
+  border-radius: 16px;
+  color: #fff;
+  padding: 24px;
+  cursor: pointer;
+}
