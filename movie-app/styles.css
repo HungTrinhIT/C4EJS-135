@@ -1,0 +1,119 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,400;0,500;0,600;0,700;0,800;1,100;1,400;1,800&display=swap");
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+:root {
+  --primary-color: #22254b;
+  --secondary-color: #373b69;
+  --text-color: #eeeeee;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: var(--primary-color);
+}
+
+/* Reuseable class */
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+/* Header */
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--secondary-color);
+  padding: 16px 40px;
+  margin-bottom: 40px;
+}
+header .logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: var(--text-color);
+  letter-spacing: 2px;
+}
+
+header .search-form {
+  border: 1px solid var(--primary-color);
+  outline: none;
+  padding: 8px 10px;
+  background: transparent;
+  border-radius: 16px;
+  width: 200px;
+  color: white;
+}
+header .search-form::placeholder {
+  color: #7076d0;
+}
+/* End header */
+
+/* Main section */
+.movie-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.movie {
+  width: 300px;
+  border-radius: 6px;
+  box-shadow: 0 4px 5px rgba(0, 0, 0, 0.3);
+  background: var(--secondary-color);
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+.movie img {
+  width: 100%;
+}
+
+.movie-info {
+  padding: 12px 18px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+.movie-info h3 {
+  color: var(--text-color);
+  font-size: 18px;
+}
+
+.movie-info span {
+  padding: 4px;
+  border-radius: 6px;
+  background: var(--primary-color);
+  color: lightgreen;
+}
+.movie-overview {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  transform: translateY(101%);
+  color: black;
+  background: #ffffff;
+  padding: 24px;
+  transition: transform 0.3s ease-in;
+  overflow-y: auto;
+  max-height: 90%;
+}
+
+.movie:hover .movie-overview {
+  transform: translateY(0);
+}
+
+.carousel-inner {
+  height: 80vh;
+}
+.carousel-item-container img {
+  object-fit: cover;
+}
