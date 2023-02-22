@@ -1,7 +1,7 @@
 function printTime() {
   const clock = document.getElementById("clock");
 
-  // Step 1: Khởi tạo đối tượng Date
+  // Step 1: Khởi tạo đối tượng Date-
   const now = new Date();
 
   //   Step 2: Lấy thông tin giờ, phút, giây hiện tại
