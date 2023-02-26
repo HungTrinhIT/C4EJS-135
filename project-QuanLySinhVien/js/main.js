@@ -251,3 +251,5 @@ function onSearchStudent(event) {
 
   renderTable(filteredStudentList);
 }
+
+// OOP: Object Oriented Programming
