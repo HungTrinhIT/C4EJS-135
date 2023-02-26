@@ -23,4 +23,19 @@ body {
   padding: 20px;
   border-radius: 8px;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 3px 12px;
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  #app .form-search {
+    width: auto;
+  }
+
+  .app {
+    padding: 0 24px;
+  }
+
+  .custom-card {
+    margin-bottom: 24px;
+  }
 }

@@ -15,7 +15,7 @@
 
   <body>
     <header>
-      <nav class="navbar navbar-expand-lg navbar-light bg-light px-5">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light px-1 px-lg-5">
         <div class="container-fluid">
           <a class="navbar-brand" href="/">
             <img
@@ -65,8 +65,12 @@
             <form id="formQLSV">
               <div class="row">
                 <div class="col-12 form-group mb-3">
-                  <label for="">ID</label>
-                  <input type="text" class="form-control" id="txtMaSV" />
+                  <label class="d-block d-lg-inline" for="">ID</label>
+                  <input
+                    type="text"
+                    class="form-control w-100 w-lg-auto"
+                    id="txtMaSV"
+                  />
                   <span id="spanMaSV" class="text-danger"></span>
                 </div>
                 <div class="col-12 form-group mb-3">
@@ -141,7 +145,9 @@
           <div class="custom-card">
             <h5 class="mb-3">Danh sách học sinh</h5>
             <!-- Search and filter -->
-            <div class="d-flex align-items-center justify-content-between mb-4">
+            <div
+              class="d-flex flex-column flex-lg-row align-items-center justify-content-between mb-4"
+            >
               <div class="search form-group d-flex align-items-center gap-3">
                 <label id="txtSearch" class="text-nowrap">Tìm kiếm</label>
                 <input
@@ -167,20 +173,22 @@
             </div>
 
             <!-- Table -->
-            <table class="table table-striped table-hover">
-              <thead>
-                <tr>
-                  <th>ID</th>
-                  <th>Tên Sinh Viên</th>
-                  <th>Email</th>
-                  <th>Ngày Sinh</th>
-                  <th>Khóa Học</th>
-                  <th>GPA</th>
-                  <th></th>
-                </tr>
-              </thead>
-              <tbody id="tbodySinhVien"></tbody>
-            </table>
+            <div class="table-responsive">
+              <table class="table table-striped table-hover align-middle">
+                <thead>
+                  <tr>
+                    <th>ID</th>
+                    <th>Tên Sinh Viên</th>
+                    <th>Email</th>
+                    <th>Ngày Sinh</th>
+                    <th>Khóa Học</th>
+                    <th>GPA</th>
+                    <th></th>
+                  </tr>
+                </thead>
+                <tbody id="tbodySinhVien"></tbody>
+              </table>
+            </div>
           </div>
         </div>
       </div>
