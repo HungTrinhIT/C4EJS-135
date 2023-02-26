@@ -1,0 +1,197 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Student Management</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+  </head>
+
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-light bg-light px-5">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="/">
+            <img
+              src="./images/logo.png"
+              alt="mindx logo"
+              width="100"
+              height="auto"
+            />
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#"
+                  >Trang chủ</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Thống kê</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Về chúng tôi</a>
+              </li>
+            </ul>
+            <div><a href="#">Login</a> or <a href="#">Signup</a></div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="app mt-3" id="app">
+      <h3 class="mb-5">MindX Technology School CRM</h3>
+      <div class="row">
+        <div class="col-12 col-lg-4">
+          <div class="custom-card">
+            <h5 class="mb-3">Thêm học sinh mới</h5>
+            <form id="formQLSV">
+              <div class="row">
+                <div class="col-12 form-group mb-3">
+                  <label for="">ID</label>
+                  <input type="text" class="form-control" id="txtMaSV" />
+                  <span id="spanMaSV" class="text-danger"></span>
+                </div>
+                <div class="col-12 form-group mb-3">
+                  <label for="">Tên Sinh Viên</label>
+                  <input type="text" class="form-control" id="txtTenSV" />
+                  <span id="spanTenSV" class="text-danger"></span>
+                </div>
+                <div class="col-12 form-group mb-3">
+                  <label for="">Email</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="txtEmail"
+                    required
+                  />
+                  <span id="spanEmailSV" class="text-danger"></span>
+                </div>
+                <div class="col-6 form-group mb-3">
+                  <label for="">Ngày Sinh</label>
+                  <input type="date" class="form-control" id="txtNgaySinh" />
+                  <span id="spanNgaySinh" class="text-danger"></span>
+                </div>
+                <div class="col-6 form-group mb-3">
+                  <label for="">Khóa học</label>
+                  <select name="" id="khSV" class="form-control">
+                    <option>Chọn khóa học</option>
+                    <option>Code for everyone</option>
+                    <option>Code intensive</option>
+                    <option>Web fullstack</option>
+                    <option>Data science</option>
+                    <option>Blockchain Developer</option>
+                  </select>
+                  <span id="spanKhoaHoc" class="text-danger"></span>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-6 form-group mb-3">
+                  <label for="">Điểm toán</label>
+                  <input class="form-control" id="txtDiemToan" type="number" />
+                  <span id="spanToan" class="text-danger"></span>
+                </div>
+                <div class="col-6 form-group mb-3">
+                  <label for="">Điểm lý</label>
+                  <input class="form-control" id="txtDiemLy" type="number" />
+                  <span id="spanLy" class="text-danger"></span>
+                </div>
+                <div class="col-6 form-group mb-3">
+                  <label for="">Điểm hóa</label>
+                  <input class="form-control" id="txtDiemHoa" type="number" />
+                  <span id="spanHoa" class="text-danger"></span>
+                </div>
+              </div>
+
+              <div class="my-3">
+                <p class="text-danger" id="errorMessage"></p>
+              </div>
+
+              <div class="form-group text-center mt-3">
+                <button
+                  type="button"
+                  onclick="createStudent()"
+                  class="btn btn-primary w-100"
+                >
+                  Thêm Sinh Viên
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="col-12 col-lg-8">
+          <div class="custom-card">
+            <h5 class="mb-3">Danh sách học sinh</h5>
+            <!-- Search and filter -->
+            <div class="d-flex align-items-center justify-content-between mb-4">
+              <div class="search form-group d-flex align-items-center gap-3">
+                <label id="txtSearch" class="text-nowrap">Tìm kiếm</label>
+                <input
+                  placeholder="Nhập tên sinh viên"
+                  type="text"
+                  class="form-control form-search"
+                  id="txtSearch"
+                  oninput="onSearchStudent(event)"
+                />
+              </div>
+              <div class="form-group">
+                <select
+                  class="form-select"
+                  aria-label="Default select example"
+                  onchange="onFilterStudent(event)"
+                >
+                  <option value="scoreAsc">Điểm tăng dần</option>
+                  <option value="scoreDsc">Điểm giảm dần</option>
+                  <option value="alphabetAZ">Họ và tên (A->Z)</option>
+                  <option value="alphabetZA">Họ và tên (Z->A)</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- Table -->
+            <table class="table table-striped table-hover">
+              <thead>
+                <tr>
+                  <th>ID</th>
+                  <th>Tên Sinh Viên</th>
+                  <th>Email</th>
+                  <th>Ngày Sinh</th>
+                  <th>Khóa Học</th>
+                  <th>GPA</th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody id="tbodySinhVien"></tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+      <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"
+      ></script>
+
+      <script src="./js/Student.js"></script>
+      <script src="./js/main.js"></script>
+    </main>
+  </body>
+</html>
